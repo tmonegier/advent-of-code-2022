@@ -30,12 +30,8 @@ public class Day2 {
         "C Z", 7
     );
 
-    public static long solvePart1(Path path) throws IOException {
-        return calculateScoreFromMap(path, MAP_OF_SCORES_PART_1);
-    }
-
-    public static long solvePart2(Path path) throws IOException {
-        return calculateScoreFromMap(path, MAP_OF_SCORES_PART_2);
+    public static long solve(Path path, boolean isPart2) throws IOException {
+        return calculateScoreFromMap(path, isPart2?MAP_OF_SCORES_PART_2:MAP_OF_SCORES_PART_1);
     }
 
     private static Integer calculateScoreFromMap(Path path, Map<String, Integer> mapOfScoresPart1) throws IOException {
